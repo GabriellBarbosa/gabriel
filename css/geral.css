@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: 0px 20px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 421px) and (max-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-wdth: 361px) and (max-width: 420px) {
+  .container {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    max-width: 240px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.3em;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 17px;
+}
+
+.destaque-roxo {
+  color: #ff6900;
+  font-weight: bold;
+}
+
+.destaque-verde {
+  color: #2aa411;
+  font-weight: bold;
+}
+
+[data-anima],
+[data-anima="smooth"] {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+[data-anima="left"] {
+  transform: translate3d(-50px, 0, 0);
+  transition: 0.8s;
+}
+
+[data-anima="right"] {
+  transform: translate3d(50px, 0, 0);
+  transition: 0.8s;
+}
+
+[data-anima].ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
